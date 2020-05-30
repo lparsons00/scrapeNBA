@@ -180,15 +180,7 @@ for Y in searchValues:
 
 
 #save all data to my local nba folder
-#if copying this code to a different machine you must change the below save locations
+#if copying this code to a different machine you must change the below save location
 stats.to_excel(r"C:/Users/Parsons/Desktop/nba/test.xlsx", sheet_name='sheet1', index=False)
 
 print("Completed Scrape to Test Excel File.")
-
-#create elo model for all nba games 
-matchups, elo_hist, curr_elos = simple_nba_elo(box_scores=stats, teams=teams, hca_elo=hca_elo, k=20)
-
-#save all elo data to my local nba folder
-#again, if moing code to a different machine we must change below save locations
-matchups.to_excel(r"C:/Users/Parsons/Desktop/nba/test2.xlsx", sheet_name='sheet1', index=False)
-elo_hist.to_excel(r"C:/Users/Parsons/Desktop/nba/test3.xlsx", sheet_name='sheet1', index=False)
